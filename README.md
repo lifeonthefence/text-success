@@ -1,15 +1,7 @@
-# Tweets Collection Update Log
+This project aims to identify which features of Tweets are most important for its success, as measured by the number of Retweets.
 
-## 1.0.0
-Try to collect tweets by keyword 'Ukraine' in 2022 and filter out tweets with `view_count = tweet.likeCount + tweet.retweetCount * 5 >= 100`.
-Store the collected data in Tweets_ukraine_100plus.csv
+Approach taken:
 
-## 1.0.1
-Also added a search for `#UkraineRussianWar` and narrowed the collection down to 2000 to speed up collection
-### problem
-After add the `#UkraineRussianWar`to the search, it becomes very slow.
-
-## 1.1
-Final version of collecting tweets. \
-Try to spread them evenly over each month, But the problem still exists. The most of the tweets on from the end of each month. \
-I also tried to avoid collecting duplicate tweets, but I haven't been successful so far. If you guys find that there is too much repetition when processing data, maybe I can further expand the amount of data collected to mitigate the impact of this part.
+    Snscrape will be used to gather texts from a given source, along with their metrics of success and other variables.
+    Natural language processing will be used to clean the dataset and extract features from the texts such as complexity, length, topic, sentiment, and key words.
+    Based on these features, a model will be trained to assess the relative importance of these in creating ‘successful’ texts; regression or more advanced (but interpretable) models can be used.
